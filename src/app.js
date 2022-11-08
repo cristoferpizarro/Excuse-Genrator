@@ -14,18 +14,9 @@ let generateExcuses = () => {
     "while I was praying"
   ];
 
-  let whoIndx = (randomItem = Math.floor(Math.random() * who.length));
-  let actionIndx = (randomItem = Math.floor(Math.random() * action.length));
-  let whatIndx = (randomItem = Math.floor(Math.random() * what.length));
-  let whenIndx = (randomItem = Math.floor(Math.random() * when.length));
-
-  return (
-    who[whoIndx] +
-    " " +
-    action[actionIndx] +
-    " " +
-    what[whatIndx] +
-    " " +
-    when[whenIndx]
-  );
+  return `${who[Math.floor(Math.random() * who.length)]} ${
+    action[Math.floor(Math.random() * action.length)]
+  } ${what[Math.floor(Math.random() * what.length)]} ${
+    when[Math.floor(Math.random() * when.length)]
+  }`;
 };
